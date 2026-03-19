@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.19.6"
+__generated_with = "0.20.2"
 app = marimo.App(width="medium")
 
 
@@ -36,10 +36,10 @@ def _(mo):
 @app.cell
 def _():
     # Variables store data
-    name = "Alice"
-    age = 25
+    name = "Sydney"
+    age = 21
     height = 1.65  # in meters
-    is_student = True
+    is_student = False
 
     print(f"Name: {name}")
     print(f"Age: {age}")
@@ -66,7 +66,7 @@ def _(mo):
 @app.cell
 def _():
     # Check types
-    print(type("Hello"))  # str
+    print(type("Hell"))  # str
     print(type(42))       # int
     print(type(3.14))     # float
     print(type(True))     # bool
@@ -385,6 +385,7 @@ def _(mo):
 @app.cell
 def _():
     import marimo as mo
+
     return (mo,)
 
 

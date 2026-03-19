@@ -46,9 +46,9 @@ def _():
     # - height: your height in meters as a float
     # - is_student: whether you're a student (True or False)
 
-    name = "YourName"  # Replace with your name
-    age = 0  # Replace with your age
-    height = 0.0  # Replace with your height
+    name = "Sydney Christopher Jnr"  # Replace with your name
+    age = 22  # Replace with your age
+    height = 1.78  # Replace with your height
     is_student = False  # Change if needed
 
     # Print them out
@@ -75,10 +75,10 @@ def _():
     # 3. 100 divided by 7 (keep decimals)
     # 4. 2 to the power of 10
 
-    sum_result = 0  # TODO
-    product = 0  # TODO
-    division = 0  # TODO
-    power = 0  # TODO
+    sum_result = 45 + 67  # TODO
+    product = 12 * 8  # TODO
+    division = 100 / 7  # TODO
+    power =  2 ** 10 # TODO
 
     print(f"Sum: {sum_result}")
     print(f"Product: {product}")
@@ -98,19 +98,20 @@ def _(mo):
 @app.cell
 def _():
     # TODO: Create a list of your 5 favorite foods
-    favorite_foods = []  # Add your foods here
+    favorite_foods = ["Onunu", "Rice", "Native-soup", "Fried-Chicken", "Noodles"]  # Add your foods here
 
     # TODO: Print the first food
-    print(f"First food: ???")  # Fix this line
+    print(f"First food: {favorite_foods[0]}")
 
     # TODO: Print the last food
-    print(f"Last food: ???")  # Fix this line
+    print(f"Last food: {favorite_foods[-1]}")  # Fix this line
 
     # TODO: Add another food to the list
     # (use the append method)
+    favorite_foods.append("Sushi")
 
     # TODO: Print the length of the list
-    print(f"Number of foods: ???")  # Fix this line
+    print(f"Number of foods: {len(favorite_foods)}")  # Fix this line
     return
 
 
@@ -131,16 +132,21 @@ def _():
     # - pages: number of pages (integer)
 
     book = {
-        # Add your key-value pairs here
+        "title": "Mylove for afro beats",
+        "author": "Sydney Christopher Jnr",
+        "year": 2005,
+        "pages": 276
     }
 
     # TODO: Print the book title and author
-    print(f"Title: ???")  # Fix this line
-    print(f"Author: ???")  # Fix this line
+    print(f"Title: {book['title']}")  # Fix this line
+    print(f"Author: {book['author']}")  # Fix this line
 
     # TODO: Add a new key "genre" with a value
+    book["genre"] = "Afrobeats"
 
     # TODO: Update the year to a different value
+    book["year"] = 2020
 
     print("\nUpdated book:", book)
     return
@@ -162,9 +168,17 @@ def _():
     # - If temp > 10: "It's cool"
     # - Otherwise: "It's cold!"
 
-    temperature = 25  # Try changing this value
+    temperature = 100  # Try changing this value
 
     # Write your if/elif/else statements here
+    if temperature > 30:
+        print("It's hot!")
+    elif temperature > 20:
+        print("It's warm")
+    elif temperature > 10:
+        print("It's cool")
+    else:
+        print("It's cold!")
     return
 
 
@@ -182,6 +196,8 @@ def _():
     numbers = [2, 4, 6, 8, 10]
 
     # Write your loop here
+    for num in numbers:
+        print(num * 3)
     return
 
 
@@ -191,6 +207,8 @@ def _():
     total = 0
 
     # Write your loop here
+    for i in range(1, 101):
+        total += i
 
     print(f"Sum of 1 to 100: {total}")
     return
@@ -209,7 +227,7 @@ def _():
     # TODO: Create a list of squares for numbers 1 through 10
     # Use a list comprehension!
 
-    squares = []  # Use list comprehension here
+    squares = [i**2 for i in range(1, 11)]  # Use list comprehension here
 
     print(f"Squares: {squares}")
     # Expected: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
@@ -223,6 +241,10 @@ def _():
 
     all_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     even_numbers = []  # Use list comprehension here
+
+    for n in all_numbers:
+        if n % 2 == 0:
+            even_numbers.append(n) 
 
     print(f"Even numbers: {even_numbers}")
     # Expected: [2, 4, 6, 8, 10, 12]
@@ -243,11 +265,16 @@ def _():
     # Example: greet("Alice") should return "Hello, Alice!"
 
     def greet(name):
-        pass  # Replace with your code
+        return f"Hello, {name}!"
 
     # Test your function
-    print(greet("Alice"))
-    print(greet("Bob"))
+    print(greet("Uchenna"))
+    print(greet("Brent"))
+    print(greet("Meshack"))
+    print(greet("Mr. Hathaway"))
+    print(greet("colleagues"))
+    print(greet("Data Think"))
+    print(greet("Sydney"))
     return
 
 
@@ -266,7 +293,7 @@ def _():
     # It should return width * height
 
     def calculate_area(width, height):
-        pass  # Replace with your code
+        return width * height
 
     # Test your function
     area1 = calculate_area(5, 10)
@@ -295,10 +322,13 @@ def _():
 
     def analyze_numbers(numbers):
         # Write your code here
+        count = len(numbers)
+        total_sum = sum(numbers)
+        average = total_sum / count if count > 0 else 0
         result = {
-            "count": 0,
-            "sum": 0,
-            "average": 0
+            "count": count,
+            "sum": total_sum,
+            "average": average
         }
         return result
 
