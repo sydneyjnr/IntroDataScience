@@ -238,6 +238,7 @@ def _(sales):
 
 @app.cell
 def _(sales):
+    import polars as pl
     # TODO: Calculate total sales by month
     # Show which month had the highest revenue
 
