@@ -10,7 +10,7 @@ Polars is a DataFrame library for Python that's designed for speed and efficienc
 
 ### Key Features
 
-**Fast ⚡**
+**Fast ⚡** https://github.com/sydneyjnr/IntroDataScience.git
 
 - Written in Rust
 - Parallel execution by default

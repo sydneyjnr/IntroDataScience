@@ -1,0 +1,398 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.20.2"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "17f78ccc3a3b14551f3d7e7b5da43d8f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"data-wrangling-with-polars\">Data Wrangling with Polars \ud83d\udc3b\u200d\u2744\ufe0f</h1>\n<span class=\"paragraph\"><strong>Welcome!</strong> Learn to load, explore, and transform data with Polars.</span>\n<span class=\"paragraph\"><strong>What you'll learn:</strong></span>\n<ul>\n<li>Loading data (CSV, JSON, Parquet)</li>\n<li>Exploring DataFrames</li>\n<li>Filtering and selecting data</li>\n<li>Creating new columns</li>\n<li>Grouping and aggregation</li>\n<li>Joining datasets</li>\n</ul>\n<span class=\"paragraph\"><strong>Estimated time:</strong> 60 minutes</span>\n<hr /></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "72f1442b694bc69cc19f7becb6f2d088",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"1-loading-data\">1. Loading Data</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "9b547f10dfe128dc571274d35b16101c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"loading-json\">Loading JSON</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "904ca9c7f855083c81c35827a58b15ef",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"2-exploring-dataframes\">2. Exploring DataFrames</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "8fc83439417c954cf3733b85e02b06a0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"3-selecting-columns\">3. Selecting Columns</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "78cc7dfab89d1478006746510301c9ae",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"4-filtering-rows\">4. Filtering Rows</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "af258d50d510168f6d28247b778783a8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"5-sorting-data\">5. Sorting Data</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "b35422258aed0bdd99b5cbbeff2d56f1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"6-creating-new-columns\">6. Creating New Columns</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZBYS",
+      "code_hash": "06222d4582069190f8e1ff6a7d33bf49",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"7-handling-missing-values\">7. Handling Missing Values</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "AjVT",
+      "code_hash": "1c8edbf52661fc0ea3b26eed5a5f5ce3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"8-grouping-and-aggregation\">8. Grouping and Aggregation</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TRpd",
+      "code_hash": "fc2f864189b48ec987c4d68ab2dfe88f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"9-working-with-dates\">9. Working with Dates</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "yCnT",
+      "code_hash": "73d542546becb0647b86074eb7b35fad",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"10-joining-dataframes\">10. Joining DataFrames</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "wAgl",
+      "code_hash": "b3bf8035f45816524026e18ce3debaed",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"11-chaining-operations\">11. Chaining Operations</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "dGlV",
+      "code_hash": "6724d501a7709c7a376f4a73d70f1620",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"12-data-cleaning-example\">12. Data Cleaning Example</h2>\n<span class=\"paragraph\">Let's clean the sales data which has some quality issues:</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lgWD",
+      "code_hash": "7ad68aacfad00d7ecab514d73b1488f9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"great-job\">\ud83c\udf89 Great Job!</h2>\n<span class=\"paragraph\">You've learned data wrangling with Polars! You now know how to:</span>\n<ul>\n<li>\u2705 Load CSV, JSON, and Parquet files</li>\n<li>\u2705 Explore and understand your data</li>\n<li>\u2705 Filter and select data</li>\n<li>\u2705 Create new calculated columns</li>\n<li>\u2705 Handle missing values</li>\n<li>\u2705 Group and aggregate data</li>\n<li>\u2705 Work with dates</li>\n<li>\u2705 Join multiple datasets</li>\n<li>\u2705 Chain operations for complex analysis</li>\n</ul>\n<span class=\"paragraph\"><strong>Next step:</strong> Open <code>03_plotting.py</code> to learn data visualization!</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "0b1dcb07b59decef238e8c181219239c",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "The system cannot find the path specified. (os error 3): ../data/raw/students.csv",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;C:\\Users\\SYDNEY\\IntroDataScience\\.venv\\Lib\\site-packages\\marimo\\_runtime\\executor.py&quot;</span>, line <span class=\"m\">138</span>, in <span class=\"n\">execute_cell</span>\n<span class=\"w\">    </span><span class=\"n\">exec</span><span class=\"p\">(</span><span class=\"n\">cell</span><span class=\"o\">.</span><span class=\"n\">body</span><span class=\"p\">,</span> <span class=\"n\">glbls</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;C:\\Users\\SYDNEY\\AppData\\Local\\Temp\\marimo_14664\\__marimo__cell_vblA_.py&quot;</span>, line <span class=\"m\">4</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">students</span> <span class=\"o\">=</span> <span class=\"n\">pl</span><span class=\"o\">.</span><span class=\"n\">read_csv</span><span class=\"p\">(</span><span class=\"s2\">&quot;../data/raw/students.csv&quot;</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Users\\SYDNEY\\IntroDataScience\\.venv\\Lib\\site-packages\\polars\\_utils\\deprecation.py&quot;</span>, line <span class=\"m\">128</span>, in <span class=\"n\">wrapper</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">function</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">args</span><span class=\"p\">,</span> <span class=\"o\">**</span><span class=\"n\">kwargs</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Users\\SYDNEY\\IntroDataScience\\.venv\\Lib\\site-packages\\polars\\_utils\\deprecation.py&quot;</span>, line <span class=\"m\">128</span>, in <span class=\"n\">wrapper</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">function</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">args</span><span class=\"p\">,</span> <span class=\"o\">**</span><span class=\"n\">kwargs</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Users\\SYDNEY\\IntroDataScience\\.venv\\Lib\\site-packages\\polars\\_utils\\deprecation.py&quot;</span>, line <span class=\"m\">128</span>, in <span class=\"n\">wrapper</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">function</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">args</span><span class=\"p\">,</span> <span class=\"o\">**</span><span class=\"n\">kwargs</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Users\\SYDNEY\\IntroDataScience\\.venv\\Lib\\site-packages\\polars\\io\\csv\\functions.py&quot;</span>, line <span class=\"m\">549</span>, in <span class=\"n\">read_csv</span>\n<span class=\"w\">    </span><span class=\"n\">df</span> <span class=\"o\">=</span> <span class=\"n\">_read_csv_impl</span><span class=\"p\">(</span>\n<span class=\"w\">    </span>    <span class=\"n\">data</span><span class=\"p\">,</span>\n<span class=\"w\">    </span><span class=\"o\">...&lt;</span><span class=\"mi\">27</span> <span class=\"n\">lines</span><span class=\"o\">&gt;...</span>\n<span class=\"w\">    </span>    <span class=\"n\">glob</span><span class=\"o\">=</span><span class=\"n\">glob</span><span class=\"p\">,</span>\n<span class=\"w\">    </span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Users\\SYDNEY\\IntroDataScience\\.venv\\Lib\\site-packages\\polars\\io\\csv\\functions.py&quot;</span>, line <span class=\"m\">697</span>, in <span class=\"n\">_read_csv_impl</span>\n<span class=\"w\">    </span><span class=\"n\">pydf</span> <span class=\"o\">=</span> <span class=\"n\">PyDataFrame</span><span class=\"o\">.</span><span class=\"n\">read_csv</span><span class=\"p\">(</span>\n<span class=\"w\">    </span>    <span class=\"n\">source</span><span class=\"p\">,</span>\n<span class=\"w\">    </span><span class=\"o\">...&lt;</span><span class=\"mi\">28</span> <span class=\"n\">lines</span><span class=\"o\">&gt;...</span>\n<span class=\"w\">    </span>    <span class=\"n\">schema</span><span class=\"o\">=</span><span class=\"n\">schema</span><span class=\"p\">,</span>\n<span class=\"w\">    </span><span class=\"p\">)</span>\n<span class=\"gr\">FileNotFoundError</span>: <span class=\"n\">The system cannot find the path specified. (os error 3): ../data/raw/students.csv</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "c01b9b0d52c3c6dd9cec98694c870f9a",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "440a70c94f46a3a475f85d6e7a15d47d",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "1fac875b54c407e37256294753b2ac87",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "7d457162dd3ef5a54bbae0402a875f9b",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "9d417b806cce015257e21a95d51a49f9",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "8e1da3effb59f0c301e7340966ccde41",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "3fbbb48d6e5b7cab96b875cfd33913d3",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "bf97ed131bc69b2b42d86c33fe32cde4",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "bc1368486afb5934ba2fade6f1b9279d",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (FileNotFoundError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "db0ec7b43c2a9f7ba49072cd96bb396d",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "2df933b50009e03c59b4117f3704f8de",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "16beaf0fae0c972ea8cb22af725126e4",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "0ea0f5fbad07d1c501be2ef149e55a0f",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "81d639508d5c99709a53f80880ce2761",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "610f4344b0b575c9542bf288ea242990",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "aLJB",
+      "code_hash": "a3a359a4a582d4d7df074a69ec1c055b",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "nHfw",
+      "code_hash": "da849b55d8550e9ec3cc18a2b2ccac85",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "xXTn",
+      "code_hash": "8f18c8ecfb6ed995d2f92b92413d9cf7",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "pHFh",
+      "code_hash": "6e51925ea171ac1601de5ed73693e38e",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "NCOB",
+      "code_hash": "98f2e11d4fd5eca7a7b3c66e3ee9d804",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "aqbW",
+      "code_hash": "f3c436014e24f773a58487cb4313e528",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "TXez",
+      "code_hash": "222d4366f0eddf82224feeaecb65333c",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "dNNg",
+      "code_hash": "50f2fd7e5c10b988853472d25048c911",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "wlCL",
+      "code_hash": "6950b84c2be12f8ea53093b842b717a4",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "kqZH",
+      "code_hash": "9b05a618af976d28c9242255689e9883",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "rEll",
+      "code_hash": "78f0b2004f81a430ddd7e1ca7f2e40ef",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "SdmI",
+      "code_hash": "0c93b990141b0d8bb3fdcdb547ab9257",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "yOPj",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
