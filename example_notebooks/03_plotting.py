@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.19.6"
+__generated_with = "0.20.2"
 app = marimo.App(width="medium")
 
 
@@ -59,19 +59,6 @@ def _(mo):
     mo.md(r"""
     ## 2. Line Charts - Trends Over Time
     """)
-    return
-
-
-@app.cell
-def _(px, weather):
-    # Simple line chart
-    fig1 = px.line(
-        weather.head(30),  # First 30 days
-        x="date",
-        y="temperature_high",
-        title="Daily High Temperature (First 30 Days)"
-    )
-    fig1
     return
 
 
@@ -155,7 +142,8 @@ def _(px, students):
         trendline="ols",  # Add trend line
         color="subject",
         size="age",
-        hover_data=["name"]
+        hover_data={"name": True,
+                   "subject": False}
     )
     fig5
     return
@@ -250,7 +238,7 @@ def _(pl, px, students):
     fig9.update_layout(
         font=dict(size=14),
         showlegend=False,
-        plot_bgcolor="white"
+        plot_bgcolor="black"
     )
 
     fig9
@@ -427,6 +415,7 @@ def _(mo):
 @app.cell
 def _():
     import marimo as mo
+
     return (mo,)
 
 
