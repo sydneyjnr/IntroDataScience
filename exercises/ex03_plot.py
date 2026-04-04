@@ -1,7 +1,6 @@
 import marimo
 
-
-__generated_with = "0.19.6"
+__generated_with = "0.20.2"
 app = marimo.App(width="medium")
 
 
@@ -45,7 +44,7 @@ def _():
     import plotly.express as px
 
     # Hint: Make sure category_sales is a valid dataframe first!
-    category_sales = pl.read_json('../data/raw/sales.json')  
+    category_sales = pl.read_json('data/raw/sales.json')  
     category_sale = category_sales.group_by('product_category').agg(pl.col("total_amount").sum().alias("total_sales"))
 
     ex_fig1 = px.bar(
@@ -93,7 +92,7 @@ def _(category_sales, pl, px):
     )
 
     ex_fig2.show()
-    return category_sales_months, ex_fig2
+    return
 
 
 @app.cell(hide_code=True)
@@ -112,7 +111,7 @@ def _(pl, px):
     # - Add a trendline (trendline="ols")
     # - Add appropriate title and labels
 
-    student_data = pl.read_csv('../data/raw/students.csv')
+    student_data = pl.read_csv('data/raw/students.csv')
 
     ex_fig3 = px.scatter(
         student_data,
@@ -125,7 +124,7 @@ def _(pl, px):
 
     # Uncomment when ready:
     ex_fig3.show()
-    return 
+    return
 
 
 @app.cell(hide_code=True)
@@ -144,7 +143,7 @@ def _(pl, px):
     # - Label the axes
     # - Try adding nbins=30 parameter
 
-    sales_data = pl.read_json('../data/raw/sales.json')
+    sales_data = pl.read_json('data/raw/sales.json')
 
     ex_fig4 = px.histogram(
         sales_data,
@@ -156,7 +155,7 @@ def _(pl, px):
 
     # Uncomment when ready:
     ex_fig4.show()
-    return 
+    return
 
 
 @app.cell(hide_code=True)
@@ -175,7 +174,7 @@ def _(category_sale, category_sales, pl):
 
     # Hint: Use go.Figure() with make_subplots or add multiple traces
     # This is challenging - check the solution if you get stuck!
-    
+
     from plotly.subplots import make_subplots
     import plotly.graph_objects as go
 
