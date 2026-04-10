@@ -1,0 +1,131 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.20.2"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ZkPl",
+      "code_hash": "fb56a6f0b0a950649162acb78fb04fe5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"case-study-1\">Case Study 1</h1></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YWdy",
+      "code_hash": "ae55e43081917c03235cba3c4bfcba93",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"visualization-1-gpu-prices-cryptocurrency-mining\"><strong>Visualization 1: GPU Prices &amp; Cryptocurrency Mining</strong></h2>\n<span class=\"paragraph\"><a href=\"https://priceonomics.com/how-has-cryptocurrency-mining-influenced-gpu-prices/\" rel=\"noopener noreferrer\" target=\"_blank\">View Article</a></span>\n<span class=\"paragraph\"><img alt=\"GPU Visualization\" src=\"https://etzq49yfnmd.exactdn.com/wp-content/uploads/2022/03/image2-13.jpg?strip=all\" /></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "uWWl",
+      "code_hash": "771657af76b3c39110a4396c98ed8bca",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">This visualization explores how cryptocurrency mining has influenced GPU prices over time, particularly during periods of high demand such as early 2021. It effectively connects real-world events, like the pandemic and crypto booms, to spikes in GPU prices, helping the reader understand the relationship between supply, demand, and pricing. The narrative style combined with the data makes the visualization engaging and easy to follow, especially for readers unfamiliar with the topic. The inclusion of historical context adds depth to the analysis. Overall, the visualization clearly answers the question, though it relies heavily on text rather than precise visual clarity.</span>\n<span class=\"paragraph\"><strong>What\u2019s good:</strong></span>\n<ul>\n<li>Strong storytelling  </li>\n<li>Real-world context  </li>\n<li>Clear trend emphasis  </li>\n</ul>\n<span class=\"paragraph\"><strong>Issue:</strong></span>\n<ul>\n<li>Visualization lacks detailed labeling and precision</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SDro",
+      "code_hash": "841cb1389714d2d2d8700353bcdf4ba4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"visualization-2-your-new-iphone-is-late\"><strong>Visualization 2: Your New iPhone Is Late</strong></h2>\n<span class=\"paragraph\"><a href=\"https://priceonomics.com/your-new-iphone-is-late/\" rel=\"noopener noreferrer\" target=\"_blank\">View Article</a></span>\n<span class=\"paragraph\"><img alt=\"iPhone Supply Chain\" src=\"https://etzq49yfnmd.exactdn.com/wp-content/uploads/2022/03/iPhone-Birthplaces-32122_smaller.jpg?strip=all&amp;w=2560\" /></span>\n<span class=\"paragraph\">This visualization shows the global supply chain of iPhone components.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SweD",
+      "code_hash": "b819ec6e6f8e833875f52eff0bd6ea9c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">This visualization explores how global supply chain disruptions\u2014particularly COVID-19 lockdowns in major Chinese port cities\u2014affect iPhone production and delivery times. It clearly shows how iPhone components are sourced from multiple countries and must arrive at assembly facilities in perfect coordination. By linking real-world events like port congestion and manufacturing slowdowns to delays in consumer products, the visualization helps readers understand the complexity and fragility of global supply chains. The combination of a world map and production flow makes the explanation intuitive and engaging, especially for readers unfamiliar with logistics systems. Overall, the visualization effectively answers the question, though it focuses more on illustrating the process than providing precise quantitative data.</span>\n<span class=\"paragraph\"><strong>What\u2019s good:</strong></span>\n<ul>\n<li>Clear visualization of global supply chain  </li>\n<li>Strong connection between real-world events and impact  </li>\n<li>Easy-to-understand flow of production  </li>\n</ul>\n<span class=\"paragraph\"><strong>Issue:</strong></span>\n<ul>\n<li>Lacks detailed quantitative data (e.g., exact volumes or timelines)</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "JSip",
+      "code_hash": "b8f7b9da8aa70c73300d2c4d80bf8b47",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"visualization-3-senior-mental-health-by-gender\"><strong>Visualization 3: Senior Mental Health by Gender</strong></h2>\n<span class=\"paragraph\"><a href=\"https://priceonomics.com/senior-citizens-face-mental-and-financial-stress/\" rel=\"noopener noreferrer\" target=\"_blank\">View Article</a></span>\n<span class=\"paragraph\"><img alt=\"Mental Health Visualization\" src=\"https://etzq49yfnmd.exactdn.com/wp-content/uploads/2022/03/Womenhealth.png?strip=all&amp;resize=640%2C480\" /></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "NUlP",
+      "code_hash": "dca06414adf357a9c8802d9ad73724ce",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">This visualization highlights the disparity in mental health between male and female seniors, showing that women are more than twice as likely as men to report not feeling mentally healthy. The chart is simple and immediately communicates the key insight through clear percentage comparisons, making it easy for readers to grasp the gender gap. It aligns well with the broader narrative of the article, reinforcing the theme that women experience more stress in later life. The minimalistic design helps focus attention on the core message without unnecessary distractions.</span>\n<span class=\"paragraph\"><strong>What\u2019s good:</strong></span>\n<ul>\n<li>Clear and easy-to-understand comparison</li>\n<li>Strong alignment with the article\u2019s narrative</li>\n<li>Effective use of percentages to emphasize disparity</li>\n</ul>\n<span class=\"paragraph\"><strong>Issue:</strong></span>\n<ul>\n<li>Lacks additional context (e.g., sample size or timeframe) which could improve interpretation</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "FpJe",
+      "code_hash": "b5f9c176565a69854806591f9cbb6138",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"visualization-4-life-expectancy-by-age-in-england-and-wales\"><strong>Visualization 4: Life Expectancy by Age in England and Wales</strong></h2>\n<span class=\"paragraph\"><a href=\"https://ourworldindata.org/life-expectancy\" rel=\"noopener noreferrer\" target=\"_blank\">View Article</a></span>\n<span class=\"paragraph\"><img alt=\"Life Expectancy Visualization\" src=\"https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/10a0ca12-415d-41c8-f6b8-0fcdd9fac900/w=1350\" /></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "HgHk",
+      "code_hash": "3e0bdbd58abd7e329a93baaca891a242",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">This visualization illustrates how life expectancy has increased across all age groups in England and Wales from 1700 to 2013, challenging the common belief that improvements are solely due to reductions in child mortality. By using multiple colored lines to represent different age groups, it effectively shows that gains in longevity occurred at every stage of life. The historical context, including events like the 1918 Spanish flu, adds depth and helps explain fluctuations in the data. Overall, the chart communicates a complex, long-term trend in a compelling and informative way.</span>\n<span class=\"paragraph\"><strong>What\u2019s good:</strong></span>\n<ul>\n<li>Displays multiple age groups simultaneously for deeper insight</li>\n<li>Strong historical context enhances understanding of trends</li>\n<li>Clearly challenges a common misconception with data</li>\n</ul>\n<span class=\"paragraph\"><strong>Issue:</strong></span>\n<ul>\n<li>The chart is visually dense and may be difficult for beginners to interpret</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
